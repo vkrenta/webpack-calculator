@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.app {
+  background: linear-gradient(#3c97e6, #c52487 90%);
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  overflow: hidden;
+}
