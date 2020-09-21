@@ -3,8 +3,8 @@
 import './app.scss';
 import App from './app';
 import { config } from '../firebase.config';
-import * as firebase from 'firebase';
+import { initializeApp } from 'firebase';
 
 document.body.appendChild(App());
 
-firebase.initializeApp(config);
+initializeApp(config);
