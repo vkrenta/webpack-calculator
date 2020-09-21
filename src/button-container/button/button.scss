@@ -9,8 +9,22 @@ $width: $height;
   line-height: $height;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    div {
+      background: linear-gradient(#3c97e6, #c52487 90%);
+      background-attachment: fixed;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: 0;
+      cursor: pointer;
+    }
   }
 }

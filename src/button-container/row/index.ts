@@ -1,6 +1,6 @@
 import './style.scss';
 
-export default function Row(...elements: HTMLDivElement[]) {
+export default function Row(...elements: HTMLElement[]) {
   const div = document.createElement('div');
   div.classList.add('row');
 

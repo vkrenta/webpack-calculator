@@ -9,7 +9,7 @@ export default function Button(props?: {
   button.classList.add('button');
 
   if (props) {
-    button.innerText = props.text;
+    button.innerHTML = `<div>${props.text}</div>`;
 
     if (props.onClick) button.addEventListener('click', props.onClick);
   }

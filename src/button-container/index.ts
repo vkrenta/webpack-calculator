@@ -9,10 +9,10 @@ export default function ButtonContainer() {
 
   div.appendChild(
     Row(
-      Button({ text: 'M', onClick: context.toMemory.bind(context) }),
-      Button({ text: 'M+', onClick: context.plusMemory.bind(context) }),
-      Button({ text: 'M-', onClick: context.minusMemory.bind(context) }),
-      Button({ text: '/', onClick: context.putSign.bind(context, '/') })
+      Button({ text: 'M', onClick: () => context.toMemory() }),
+      Button({ text: 'M+', onClick: () => context.plusMemory() }),
+      Button({ text: 'M-', onClick: () => context.minusMemory() }),
+      Button({ text: '/', onClick: () => context.putSign('/') })
     )
   );
   div.appendChild(
@@ -20,7 +20,7 @@ export default function ButtonContainer() {
       Button({ text: '7', onClick: () => context.putNumber(7) }),
       Button({ text: '8', onClick: () => context.putNumber(8) }),
       Button({ text: '9', onClick: () => context.putNumber(9) }),
-      Button({ text: '*', onClick: context.putSign.bind(context, '*') })
+      Button({ text: '*', onClick: () => context.putSign('*') })
     )
   );
   div.appendChild(
@@ -28,7 +28,7 @@ export default function ButtonContainer() {
       Button({ text: '5', onClick: () => context.putNumber(5) }),
       Button({ text: '6', onClick: () => context.putNumber(6) }),
       Button({ text: '4', onClick: () => context.putNumber(4) }),
-      Button({ text: '-', onClick: context.putSign.bind(context, '-') })
+      Button({ text: '-', onClick: () => context.putSign('-') })
     )
   );
   div.appendChild(
@@ -36,14 +36,14 @@ export default function ButtonContainer() {
       Button({ text: '1', onClick: () => context.putNumber(1) }),
       Button({ text: '2', onClick: () => context.putNumber(2) }),
       Button({ text: '3', onClick: () => context.putNumber(3) }),
-      Button({ text: '+', onClick: context.putSign.bind(context, '+') })
+      Button({ text: '+', onClick: () => context.putSign('+') })
     )
   );
   div.appendChild(
     Row(
       Button({ text: '•', onClick: () => context.dot() }),
       Button({ text: '0', onClick: () => context.putNumber(0) }),
-      Button({ text: 'C', onClick: context.clear.bind(context) }),
+      Button({ text: 'C', onClick: () => context.clear() }),
       Button({ text: '=', onClick: () => context.calculate() })
     )
   );

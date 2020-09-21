@@ -1,5 +1,3 @@
-import { create, all } from 'mathjs';
-
 export const INPUT_CHANGED = 'input-changed';
 export const BUFFER_CHANGED = 'BUFFER_CHANGED';
 export const SIGN_CHANGED = 'SIGN_CHANGED';
@@ -18,7 +16,7 @@ class Context {
   private signChanged = new Event(SIGN_CHANGED);
   private memoryChanged = new Event(MEMORY_CHANGED);
   private outputChanged = new Event(OUTPUT_CHANGED);
-  private math = create(all, { number: 'BigNumber', precision: 64 });
+  private math: Partial<import('mathjs').MathJsStatic>;
 
   set input(value: string | null) {
     this._input = value;
@@ -71,6 +69,9 @@ class Context {
     this.sign = null;
     this.input = null;
     this.output = null;
+    import('mathjs').then(({ create, all }) => {
+      this.math = create(all, { number: 'BigNumber', precision: 64 });
+    });
   }
 
   toMemory() {
