@@ -1,3 +1,4 @@
+import './app.scss';
 import ButtonContainer from './button-container/index';
 import Displayer from './displayer/displayer';
 

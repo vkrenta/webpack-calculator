@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Calculator',
+      favicon: path.resolve(__dirname, 'favicon.ico'),
     }),
   ],
   module: {

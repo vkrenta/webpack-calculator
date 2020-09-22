@@ -13,6 +13,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Calculator',
+      favicon: path.resolve(__dirname, 'favicon.ico'),
     }),
     new BrotliWebpackPlugin({
       asset: '[path].br[query]',
