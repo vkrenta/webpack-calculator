@@ -25,9 +25,9 @@ export default function ButtonContainer() {
   );
   div.appendChild(
     Row(
+      Button({ text: '4', onClick: () => context.putNumber(4) }),
       Button({ text: '5', onClick: () => context.putNumber(5) }),
       Button({ text: '6', onClick: () => context.putNumber(6) }),
-      Button({ text: '4', onClick: () => context.putNumber(4) }),
       Button({ text: '-', onClick: () => context.putSign('-') })
     )
   );
